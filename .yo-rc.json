@@ -1,0 +1,6 @@
+{
+  "generator-angular-famous-ionic": {
+    "ionic": true,
+    "famous": true
+  }
+}

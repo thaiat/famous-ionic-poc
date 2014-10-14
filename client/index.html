@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" ng-app="main">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sample app</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-controller="main.common.hello as helloCtrl">
+
+    <h2>{{helloCtrl.message}}</h2>
+    <ion-list>
+        <ion-item ng-repeat="item in helloCtrl.items">
+            <fa-app style="height:40px">
+                <fa-modifier fa-scale="item.scale.get()">
+                    <fa-surface fa-background-color="'red'" fa-click="helloCtrl.click(item)">{{item.text}}</fa-surface>
+                </fa-modifier>
+            </fa-app>
+        </ion-item>
+    </ion-list>
+
+    <script src="scripts/bundle.js"></script>
+</body>
+
+</html>
