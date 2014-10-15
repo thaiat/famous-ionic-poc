@@ -11,7 +11,7 @@ var constants = require('../common/constants')();
 var bundleShare = function(b, dest, bundleName) {
     var bundle = b.bundle();
 
-    bundle()
+    bundle
         .on('error', function(err) {
             gutil.log(chalk.red('Browserify failed'), '\n', err);
             bundle.end();
